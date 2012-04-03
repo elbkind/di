@@ -48,7 +48,7 @@
 				</executions>
 				<configuration>
 					<contextFile>${basedir}/spring/applicationContext.xml</contextFile>
-					<className>de.picticket.tourmanager.mobile.BeanFactory</className>
+					<className>de.s2.di.springme.BeanFactory</className>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -4,4 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
 	default-lazy-init="true">
 
+	<bean id="context"
+		class="de.s2.di.springme.SpringMeContext"
+		factory-method="getInstance" />
 </beans>
