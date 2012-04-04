@@ -53,7 +53,9 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore />
+										<execute>
+											<runOnIncremental>false</runOnIncremental>
+										</execute>
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -66,37 +68,43 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore />
+										<execute>
+											<runOnIncremental>false</runOnIncremental>
+										</execute>
 									</action>
 								</pluginExecution>
 
 								<pluginExecution>
-								<pluginExecutionFilter>
-								<groupId>org.apache.maven.plugins</groupId>
-								<artifactId>maven-resources-plugin</artifactId>
-								<versionRange>[1.0.0,)</versionRange>
-								<goals>
-								<goal>jar</goal>
-								<goal>resources</goal>
-								<goal>testResources</goal>
-								</goals>
-								</pluginExecutionFilter>
-								<action>
-								<ignore />
-								</action>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-resources-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>jar</goal>
+											<goal>resources</goal>
+											<goal>testResources</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute>
+											<runOnIncremental>false</runOnIncremental>
+										</execute>
+									</action>
 								</pluginExecution>
 								<pluginExecution>
-								<pluginExecutionFilter>
-								<groupId>org.apache.maven.plugins</groupId>
-								<artifactId>maven-jar-plugin</artifactId>
-								<versionRange>[1.0.0,)</versionRange>
-								<goals>
-								<goal>jar</goal>
-								</goals>
-								</pluginExecutionFilter>
-								<action>
-								<ignore />
-								</action>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-jar-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>jar</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute>
+											<runOnIncremental>false</runOnIncremental>
+										</execute>
+									</action>
 								</pluginExecution>
 
 							</pluginExecutions>

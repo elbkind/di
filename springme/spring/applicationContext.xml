@@ -7,4 +7,14 @@
 	<bean id="context"
 		class="de.s2.di.springme.SpringMeContext"
 		factory-method="getInstance" />
+		
+		
+	<bean id="singletonCounter" class="de.s2.di.springme.Counter" scope="singleton" />
+	
+	<bean id="tempCounter" class="de.s2.di.springme.Counter" scope="prototype" />
+	
+	<bean id="complexType" class="de.s2.di.springme.ObjectWithACounter" init-method="postCreate" destroy-method="preDestroy">
+		<constructor-arg><value>Ein Text</value></constructor-arg>
+		<constructor-arg ref="tempCounter" />
+	</bean>
 </beans>
