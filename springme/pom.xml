@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>de.s2.di</groupId>
-    <artifactId>springme</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>apk</packaging>
-    <name>Spring ME</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.s2.di</groupId>
+	<artifactId>springme</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>apk</packaging>
+	<name>Spring ME</name>
 
 	<dependencies>
 		<dependency>
@@ -33,6 +34,77 @@
 		</resources>
 
 		<!-- To use the plugin goals in your POM or parent POM -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>me.springframework</groupId>
+										<artifactId>spring-me-maven-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>generate</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-compiler-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>jar</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+
+								<pluginExecution>
+								<pluginExecutionFilter>
+								<groupId>org.apache.maven.plugins</groupId>
+								<artifactId>maven-resources-plugin</artifactId>
+								<versionRange>[1.0.0,)</versionRange>
+								<goals>
+								<goal>jar</goal>
+								<goal>resources</goal>
+								<goal>testResources</goal>
+								</goals>
+								</pluginExecutionFilter>
+								<action>
+								<ignore />
+								</action>
+								</pluginExecution>
+								<pluginExecution>
+								<pluginExecutionFilter>
+								<groupId>org.apache.maven.plugins</groupId>
+								<artifactId>maven-jar-plugin</artifactId>
+								<versionRange>[1.0.0,)</versionRange>
+								<goals>
+								<goal>jar</goal>
+								</goals>
+								</pluginExecutionFilter>
+								<action>
+								<ignore />
+								</action>
+								</pluginExecution>
+
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>me.springframework</groupId>
@@ -60,7 +132,7 @@
 						<!-- platform or api level (api level 4 = platform 1.6) -->
 						<platform>13</platform>
 					</sdk>
-					 <deleteConflictingFiles>true</deleteConflictingFiles>
+					<deleteConflictingFiles>true</deleteConflictingFiles>
 					<emulator>
 						<!-- the name of the avd device to use for starting the emulator -->
 						<avd>16</avd>
@@ -84,4 +156,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
+
 </project>
