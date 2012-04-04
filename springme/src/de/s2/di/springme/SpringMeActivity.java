@@ -28,8 +28,8 @@ public class SpringMeActivity extends Activity
 		setContentView(R.layout.main);
 		logState("onCreate");
 		
-		Button b = (Button) this.findViewById(R.id.button_quit);
-		b.setOnClickListener(new View.OnClickListener(){
+		Button quit = (Button) this.findViewById(R.id.button_quit);
+		quit.setOnClickListener(new View.OnClickListener(){
 
 			@Override
 			public void onClick(View v)

@@ -10,7 +10,6 @@
 	<Button 	android:id="@+id/button_quit" 
 				android:layout_width="wrap_content"
 				android:layout_height="50px" 
-				android:layout_weight="0.92"
 				android:text="@string/app_quit" />
 </LinearLayout>
 
