@@ -4,12 +4,12 @@
 	android:layout_height="fill_parent">
 	<TextView 	android:layout_width="fill_parent"
 				android:layout_height="wrap_content" 
-				android:text="Hello World, SpringMeActivity" />
+				android:text="Tiny Spring Activity" />
 
 	<Button
 	    android:id="@+id/button_quit"
 	    android:layout_width="wrap_content"
-	    android:layout_height="50px"
+	    android:layout_height="50dp"
 	    android:text="@string/app_quit" />
 
 </LinearLayout>
