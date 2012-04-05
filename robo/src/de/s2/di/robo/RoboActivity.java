@@ -1,13 +1,13 @@
 package de.s2.di.robo;
 
+import roboguice.inject.InjectView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 import com.google.inject.Inject;
-import roboguice.inject.ContextScoped;
-import roboguice.inject.InjectView;
 
 
 public class RoboActivity extends roboguice.activity.RoboActivity

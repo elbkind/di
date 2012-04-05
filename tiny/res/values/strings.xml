@@ -4,5 +4,6 @@
     <string name="hello">Hello World, TinyActivity!</string>
     <string name="app_name">Tiny</string>
     <string name="app_quit">Beenden</string>
+    <string name="tiny_act">Tiny Spring Activity</string>
 
 </resources>
